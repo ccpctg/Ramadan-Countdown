@@ -18,7 +18,6 @@ import {
   Lock,
   Unlock,
   Eye,
-  EyeOff,
   Copy,
   AlignLeft,
   AlignCenter,
@@ -46,7 +45,6 @@ import {
   DEFAULT_PIXELLAB_STYLE,
   HitBox,
   ISLAMIC_ICON_OPTIONS,
-  MunajatStyle,
   PixelLabTextStyle,
   renderCardToCanvas
 } from './utils/cardRenderer';
@@ -189,7 +187,7 @@ export default function App() {
 
   const [activeTab, setActiveTab] = useState<'days' | 'text' | 'dua' | 'logo' | 'bg' | 'layers'>('days');
   const [selectedLayerId, setSelectedLayerId] = useState<string | null>('quote');
-  const [showSelectionBox, setShowSelectionBox] = useState<boolean>(true);
+  const [showSelectionBox] = useState<boolean>(true);
   const [snapGuides, setSnapGuides] = useState<{ x: boolean; y: boolean }>({ x: false, y: false });
   const [customFonts, setCustomFonts] = useState<FontOption[]>([]);
   const [fontsReadyTick, setFontsReadyTick] = useState<number>(0);
